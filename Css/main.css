@@ -1,0 +1,24 @@
+.filtrar{
+    position: absolute;
+    width: 100%;
+    height: 7.625em;
+    background: #CFCFCF;
+}
+
+.txtFiltrar{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 75px;
+    color: #000000;
+}
+
+.sesaoPrincipal{
+    width: 100%;
+    height: 794px;
+    background-image: url(../img/ImagemPrincipal\ 1imagemPrincipal.png);
+    background-size: cover;
+    background-position: right top;
+    
+}
