@@ -1,8 +1,15 @@
+main{
+    display: flex;
+    flex-direction: column  ;
+    width: 100%;
+    min-height: 100vh;
+}
+
 .filtrar{
-    position: absolute;
     width: 100%;
     height: 7.625em;
-    background: #CFCFCF;
+    color: brown;
+    background-color: #CFCFCF;
 }
 
 .txtFiltrar{
@@ -15,46 +22,254 @@
 }
 
 .sesaoPrincipal{
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 900px;
-    background-image: url(../img/ImagemPrincipal.png);
+    height: 100vh;
+    background-image: url(../img/imagemInicio.png);
     background-size: cover;
     background-position: right top;
-    
+}
+
+.txtContainer{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerTexto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 80%;
+}
+
+.txtInicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 144px;
+    line-height: 150px;
+    text-align: center;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
 }
 
 .sesaoProdutos{
+    display: flex;
     width: 100%;
-    min-height: 900px;
+    min-height: 100vh;
     max-height: auto;
     background: rgb(245,245,220);
     background: linear-gradient(90deg, rgba(245,245,220,1) 16%, 
     rgba(250,235,215,1) 34%, rgba(255,222,173,1) 54%, rgba(245,222,179,1) 82%);
+    flex-direction: column;
+}
+
+.tituloSessaoProdutos{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txtProdutos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 64px;
+    color: blacks;
 
 }
 
-.sesaoDestaques{
+.containerCards{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem 8.56em;
+    flex-flow: row wrap;
+    padding: 1rem 15rem 1rem 15rem; 
+}
+
+.cardProduto{
+    display: flex;
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    flex-direction: column;
+    box-shadow: none;
+    transition: box-shadow 0.5s  0.2s ease-in;
+}
+
+.cardProduto:hover{
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.containerImg{
     width: 100%;
-    min-height: 900px;
+    height: 200px;
+}
+
+.containerImg img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.containerDescricaoCard{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-direction: column;
+}
+
+.containerDescricaoCard .avaliacao{
+    color: gold;
+    font-size: 50px;
+}
+
+
+
+.sesaoDescontos{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
     max-height: auto;
+    flex-direction: column;
     background: rgb(255,228,196);
     background: linear-gradient(90deg, rgba(255,228,196,1) 10%, rgba(238,213,183,1) 43%, 
     rgba(255,218,185,1) 68%, rgba(222,184,135,1) 86%);
-    
 }
 
-.sesaoDescontos{
+.tituloSesaoDescontos{
     width: 100%;
-    min-height: 900px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txtDescontos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 64px;
+    color: blacks;
+}
+
+.containerCardsDesconto{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem 8.56em;
+    flex-flow: row wrap;
+    padding: 1rem 15rem 1rem 15rem; 
+}
+
+.cardProdutoDesconto{
+    display: flex;
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    flex-direction: column;
+    box-shadow: none;
+    transition: box-shadow 0.5s  0.2s ease-in;
+}
+
+.cardProdutoDesconto:hover{
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.containerImgDesconto{
+    width: 100%;
+    height: 200px;
+}
+
+.containerImgDesconto img{
+    width: 100%;
+    height: 100%;
+}
+
+.containerDescricaoCardDesconto{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-direction: column;
+}
+
+.containerDescricaoCardDesconto .avaliacao{
+    color: gold;
+    font-size: 50px;
+}
+
+.containerDescricaoCardDesconto .vermelho{
+    color: red;
+}
+
+.containerDescricaoCardDesconto .verde{
+    color: green;
+}
+
+
+
+.sesaoDestaques{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     max-height: auto;
     background: rgb(139,69,19);
     background: linear-gradient(90deg, rgba(139,69,19,1) 28%, rgba(205,133,63,1) 64%, 
     rgba(222,184,135,1) 90%);
 }
 
+.tituloSesaoDestaques{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txtDestaques{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 64px;
+    color: blacks;
+}
+
+.containerCardsDestaques{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem 8.56em;
+    flex-flow: row wrap;
+    padding: 1rem 15rem 1rem 15rem;
+}
+
+
 .contatos{
     width: 100%;
-    height: 900px;
+    height: 100vh;
     background-image: url(../img/café-fundo-contatos\ 1.png);
     background-size: cover;
     background-position: right top;
