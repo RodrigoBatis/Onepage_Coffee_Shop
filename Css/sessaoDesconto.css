@@ -1,0 +1,88 @@
+/*
+    Css Sessão 3
+*/
+
+.sesaoDescontos{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    max-height: auto;
+    flex-direction: column;
+    background: rgb(255,228,196);
+    background: linear-gradient(90deg, rgba(255,228,196,1) 10%, rgba(238,213,183,1) 43%, 
+    rgba(255,218,185,1) 68%, rgba(222,184,135,1) 86%);
+}
+
+.tituloSesaoDescontos{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txtDescontos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 64px;
+    color: blacks;
+}
+
+.containerCardsDesconto{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem 8.56em;
+    flex-flow: row wrap;
+    padding: 1rem 15rem 1rem 15rem; 
+}
+
+.cardProdutoDesconto{
+    display: flex;
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    flex-direction: column;
+    box-shadow: none;
+    transition: box-shadow 0.5s  0.2s ease-in;
+}
+
+.cardProdutoDesconto:hover{
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.containerImgDesconto{
+    width: 100%;
+    height: 200px;
+}
+
+.containerImgDesconto img{
+    width: 100%;
+    height: 100%;
+}
+
+.containerDescricaoCardDesconto{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-direction: column;
+}
+
+.containerDescricaoCardDesconto .avaliacao{
+    color: gold;
+    font-size: 50px;
+}
+
+.containerDescricaoCardDesconto .vermelho{
+    color: red;
+}
+
+.containerDescricaoCardDesconto .verde{
+    color: green;
+}
