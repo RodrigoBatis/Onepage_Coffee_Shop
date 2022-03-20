@@ -6,6 +6,8 @@ main{
 }
 
 .filtrar{
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 7.625em;
     color: brown;
@@ -13,12 +15,16 @@ main{
 }
 
 .txtFiltrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 64px;
     line-height: 75px;
     color: #000000;
+    margin-left: 2rem;
 }
 
 /*
@@ -29,7 +35,7 @@ main{
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    background-image: url(../img/imagemInicio.png);
+    background-image: url(../img/menu.png);
     background-size: cover;
     background-position: right top;
 }
