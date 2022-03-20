@@ -165,8 +165,24 @@
 
     <section class="contatos">
         <div id="form">
-            <form action="frmContato">
+            <form method="post" action="">
+                <div id="divObs">
+                    <label for="txtObs" id="lblObs">Observação:</label>
+                    <textarea name="txtObs" id="txtObs"></textarea>
+                </div>
 
+                <div id="divNome">
+                    <label for="txtNome" id="lblNome">Coloque aqui seu nome:</label>
+                    <input type="text" name="txtNome" id="txtNome">
+                </div>
+
+                <div id="divEmail">
+                    <label for="txtEmail" id="lblEmail">Deixe aqui seu email para contato:</label>
+                    <input type="text" name="txtEmail" id="txtEmail">
+                </div>
+                <div id="divBtn">
+                <input type="submit" name="btnEnviar" id="btnEnviar" value="Enviar Observação"> 
+                </div>
             </form>
         </div>
     </section>
