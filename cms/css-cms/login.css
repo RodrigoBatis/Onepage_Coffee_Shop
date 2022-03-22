@@ -1,0 +1,25 @@
+main{
+    display: flex;
+    width: inherit;
+    height: inherit;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-login{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 500px;
+    background-color: bisque;
+}
+
+#cabecario{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 100px;
+    background-color: blue;
+}
