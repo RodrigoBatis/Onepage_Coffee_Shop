@@ -1,0 +1,16 @@
+footer{
+    display: flex;
+    width: 100%;
+    height: 250px;
+}
+
+footer #divFooter{
+    display: flex;
+    flex-grow: 1;
+    background: #DCB395;
+}
+
+footer #container-redes{
+    width: 205px;
+    height: 97px;
+}

@@ -7,7 +7,7 @@
     height: 10px;
     background-color: #fff;
     margin: 8px;
-    margin-left: 15rem;
+    margin-left: 2rem;
 }
 
 .conteudoMenuBurguer{
@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     width: 200px;
-    height: 800px;
+    height: 1000px;
     background-color: rgba(196, 196, 196, 0.5);
     position: flex;
     transform: translate(-100%);
