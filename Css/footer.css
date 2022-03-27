@@ -11,6 +11,58 @@ footer #divFooter{
 }
 
 footer #container-redes{
-    width: 205px;
-    height: 97px;
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    height: 100px;
+    margin-left: 10rem;
+}
+
+footer #container-redes #txtRedes{
+    font-size: 36px;
+    color: rgba(38, 14, 8, 0.8);
+}
+
+footer #container-redes #icons-redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer #container-pagamento{
+    width: 350px;
+    height: 100px;
+    margin-left: 70rem;
+}
+
+footer #container-pagamento #txtPagamento{
+    font-size: 36px;
+    color: rgba(38, 14, 8, 0.8);
+}
+
+footer #container-pagamento #icons-pagamento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer #container-copyright{
+    width: 766px;
+    height: 50px;
+    background: #C08A63;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12rem;
+    margin-left: -80rem;
+}
+
+footer #container-copyright #copyright{
+    font-size: 48px;
+    font-family: 'Abhaya Libre ExtraBold';
+    font-style: normal;
+    color: #000000;
 }
