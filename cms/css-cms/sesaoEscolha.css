@@ -1,0 +1,48 @@
+#sesaoEscolha{
+    width: 100%;
+    height: 150px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.container-escolha{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+.container-escolha:nth-last-of-type(1) img{
+    width: 80px;
+    height: 80px;
+}
+
+.container-escolha img{
+    width: 100px;
+    height: 100px;
+}
+
+.container-escolha p{
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.container-escolha span{
+    font-size: 1rem;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.container-escolha:hover>img{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all 0.5s;
+}

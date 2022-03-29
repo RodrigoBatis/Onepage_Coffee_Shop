@@ -7,24 +7,26 @@
     <link rel="stylesheet" href="css-cms/reset.css">
     <link rel="stylesheet" href="css-cms/style.css">
     <link rel="stylesheet" href="css-cms/login.css">
-    <title>Document</title>
+    <title>Login</title>
 </head>
-<body>
+<body id="login">
     <main>
         <div id="container-login">
+            <div id="divLogo">
+                <span id="logoEmpresa">Good Coffee</span>
+            </div>
             <div id="cabecario">
                 <h1 id="txtTitulo"> Autenticação para o CMS</h1>
-                <span> -- nome do projeto -- </span>
             </div>
 
             <div id="form">
                 <form method="post" action="">
                     <div id="divLogin">
-                        <label for="txtLogin">Login:</label>
+                        <label for="txtLogin" id="lblLogin">Login:</label>
                         <input type="text" name="txtLogin" id="txtLogin" required="required">
                     </div>
                     <div id="divSenha">
-                        <label for="txtSenha">Senha:</label>
+                        <label for="txtSenha" id="lblSenha">Senha:</label>
                         <input type="text" name="txtSenha" id="txtSenha" required="required">
                     </div>
                     <div id="botao">

@@ -1,0 +1,10 @@
+#sesaoDashboard{
+    width: 100%;
+    min-height: 100vh;
+    background-color: aliceblue;
+    padding-top: 20px;
+}
+
+#sesaoDashboard #tituloSesao{
+    font-size: 2rem;
+}
