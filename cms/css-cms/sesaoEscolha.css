@@ -7,15 +7,19 @@
     justify-content: space-between;
 }
 
-
 .container-escolha{
     width: 200px;
     height: 100%;
+    display: flex;
+}
+
+.container-escolha a{  
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 1.5rem;
     transition: all 0.5s;
+    text-decoration: none;
 }
 
 .container-escolha:nth-last-of-type(1) img{

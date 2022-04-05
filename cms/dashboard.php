@@ -28,28 +28,38 @@
     <main>
         <section id="sesaoEscolha">
                 <div class="container-escolha">
+                    <a href="">
                     <img src="img-cms/produtos.png" alt="admProdutos">
                     <span>Adm. de Produtos</span>
+                    </a>
                 </div>
                 <div class="container-escolha">
+                    <a href="">
                     <img src="img-cms/categorias.png" alt="categorias">
                     <span>Adm. de Categorias</span>
+                    </a>
                 </div>
 
                 <div class="container-escolha">
-                    <img src="img-cms/contato.png" alt="contatos">
+                    <a href="contatos.php">
+                    <img src="img-cms/contato.png" alt="contatos" >
                     <span>Contatos</span>
+                    </a>
                 </div>
 
                 <div class="container-escolha">
+                    <a href="">
                     <img src="img-cms/usuarios.png" alt="usuarios">
                     <span>Usuarios</span>
+                    </a>
                 </div>
 
             <div class="container-escolha">
                 <p>Bem Vindo <span>-- Rodrigo --</span></p>
+                <a href="">
                 <img src="img-cms/sair.png" alt="sair">
                 <span>Logout</span>
+                </a>
             </div>
 
         </section>
@@ -59,6 +69,7 @@
             </div>
         </section>
     </main>
+    
     <footer>
         <span>Copyright 2022 © | Rodrigo Batista</span>
     </footer>
