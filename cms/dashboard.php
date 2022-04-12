@@ -26,7 +26,7 @@
         </div>
     </header>
     <main>
-        <section id="sesaoEscolha">
+        <section class="sesaoEscolha">
                 <div class="container-escolha">
                     <a href="">
                     <img src="img-cms/produtos.png" alt="admProdutos">
@@ -34,7 +34,7 @@
                     </a>
                 </div>
                 <div class="container-escolha">
-                    <a href="">
+                    <a href="categorias.php">
                     <img src="img-cms/categorias.png" alt="categorias">
                     <span>Adm. de Categorias</span>
                     </a>
@@ -64,8 +64,8 @@
 
         </section>
         <section>
-            <div id="sesaoDashboard">
-                <h1 id="tituloSesao">Adiministração de Categorias</h1>
+            <div class="sesaoDashboard">
+                <h1 id="tituloSesao">Adiministração do Site de Vendas</h1>
             </div>
         </section>
     </main>

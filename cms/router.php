@@ -23,7 +23,7 @@
         
         switch ($component)
         {
-            case "CONTATOS";
+            case "CONTATOS":
 
             require_once("Controller/controllerContatos.php");
 
@@ -39,7 +39,7 @@
                         {
                             echo("<script>
                                     alert('Registro excluido com sucesso');
-                                    window.location.href = './pages/contatos.php'; 
+                                    window.location.href = 'contatos.php'; 
                                 </script>");
                         }
                     }elseif(is_array($resposta))
@@ -50,7 +50,35 @@
                             </script>");
                     }
             }
+            break;
 
+            case "CATEGORIAS":
+
+            require_once("Controller/controllerCategorias.php");    
+
+            if($action == 'DELETAR')
+            {
+                $idCategoria = $_GET["id"];
+                   
+                $resposta = excluirCategoria($idCategoria);
+                    
+                if(is_bool($resposta))
+                {
+                    if($resposta)
+                    {
+                        echo("<script>
+                                    alert('Categoria excluido com sucesso');
+                                    window.location.href = 'categorias.php'; 
+                                </script>");
+                    }
+                }elseif(is_array($resposta))
+                {
+                    echo("<script>
+                                alert('".$resposta['message']."');
+                                window.history.back(); 
+                            </script>");
+                }
+            }
         }
     }    
 

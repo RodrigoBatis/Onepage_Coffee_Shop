@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css-cms/sesaoDashboard.css">
     <link rel="stylesheet" href="css-cms/footer.css">
     <link rel="stylesheet" href="css-cms/sesaoContato.css">
+    <link rel="stylesheet" href="css-cms/sesaoCategoria.css">
     <title>Gerencionamento-Contatos</title>
 </head>
 
@@ -29,43 +30,52 @@
         </div>
     </header>
     <main>
-        <section id="sesaoEscolha">
+        <section class="sesaoEscolha">
             <div class="container-escolha">
-                <img src="img-cms/produtos.png" alt="admProdutos">
-
-                <span>Adm. de Produtos</span>
+                <a href="">
+                    <img src="img-cms/produtos.png" alt="admProdutos">
+                    <span>Adm. de Produtos</span>
+                </a>
             </div>
             <div class="container-escolha">
-                <img src="img-cms/categorias.png" alt="categorias">
-                <span>Adm. de Categorias</span>
-            </div>
-
-            <div class="container-escolha">
-                <img src="img-cms/contato.png" alt="contatos">
-                <span>Contatos</span>
+                <a href="categorias.php">
+                    <img src="img-cms/categorias.png" alt="categorias">
+                    <span>Adm. de Categorias</span>
+                </a>
             </div>
 
             <div class="container-escolha">
-                <img src="img-cms/usuarios.png" alt="usuarios">
-                <span>Usuarios</span>
+                <a href="dashboard.php">
+                    <img src="img-cms/contato.png" alt="contatos">
+                    <span>Contatos</span>
+                </a>
+            </div>
+
+            <div class="container-escolha">
+                <a href="">
+                    <img src="img-cms/usuarios.png" alt="usuarios">
+                    <span>Usuarios</span>
+                </a>
             </div>
 
             <div class="container-escolha">
                 <p>Bem Vindo <span>-- Rodrigo --</span></p>
-                <img src="img-cms/sair.png" alt="sair">
-                <span>Logout</span>
+                <a href="">
+                    <img src="img-cms/sair.png" alt="sair">
+                    <span>Logout</span>
+                </a>
             </div>
 
         </section>
         <section>
 
-            <div id="sesaoDashboard">
-                <h1 id="tituloSesao">Contatos</h1>
+            <div class="sesaoDashboard">
+                <h1 class="tituloSesao">Contatos</h1>
                 <div id="consultaDeDados">
                     <table id="tblConsulta">
                         <tr>
                             <td id="tblTitulo" colspan="6">
-                                <h1> Consulta de Dados.</h1>
+                                <h1> Consulta de Contatos.</h1>
                             </td>
                         </tr>
                         <tr id="tblLinhas">
@@ -84,13 +94,11 @@
                                 <td class="tblColunas registros"><?= $item["email"] ?></td>
 
                                 <td class="tblColunas registros">
-                                    <img src="img-cms/edit.png" alt="Editar" title="Editar" class="editar">
 
-                                    <a onclick="return confirm('Tem certeza que quer excluir esse contato?')" href="../router.php?component=contatos&action=deletar&id=<?= $item['id'] ?>">
+                                    <a onclick="return confirm('Tem certeza que quer excluir esse contato?')" href="router.php?component=contatos&action=deletar&id=<?= $item['id'] ?>">
                                         <img src="img-cms/trash.png" alt="Excluir" title="Excluir" class="excluir">
                                     </a>
 
-                                    <img src="img-cms/search.png" alt="Visualizar" title="Visualizar" class="pesquisar">
                                 </td>
                             </tr>
 
