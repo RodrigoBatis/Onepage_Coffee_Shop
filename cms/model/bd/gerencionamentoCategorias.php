@@ -54,7 +54,82 @@ function deleteCategoria($id)
     return $statusResultado;
 }
 
+function insertCategoria($dadosCategoria)
+{
+    $conexao = conexaoMysql();
 
+    $sql = "insert into tbl_categorias 
+        (nome)
+    values('".$dadosCategoria["nome"]."')";
+    
+    if(mysqli_query($conexao, $sql))
+    {
+        if(mysqli_affected_rows($conexao))
+        {
+            $statusResultado = true;
+        }else
+        {
+            $statusResultado = false;
+        }
+    }else
+    {
+        $statusResultado = false;
+    }
 
+    fecharConexaoMysql($conexao);
+    return $statusResultado;
+}
+
+function updateCategoria($dadosCategoria)
+{
+    $conexao = conexaoMysql();
+
+    $sql = "update tbl_categorias set
+       nome = '".$dadosCategoria["nome"]."',
+       where idContato =  ".$dadosCategoria["id"].";"
+   ;
+       
+   if (mysqli_query($conexao, $sql))
+    {
+        // Validação para verificar se uma linha foi acrescentada no BD 
+        if(mysqli_affected_rows($conexao)){
+            $statusResultado = true;
+        }else{
+            $statusResultado = false;
+        }
+       
+    }else{
+        $statusResultado = false;
+    }
+
+    fecharConexaoMysql($conexao);
+    return $statusResultado;
+}
+
+function selectByidContato($id)
+    {
+
+        $conexao = conexaoMysql();
+
+        $sql = "select * from tbl_categorias where id_categoria = ".$id;
+
+        $result = mysqli_query($conexao, $sql);
+
+        if($result)
+        {
+
+            if($rsDados = mysqli_fetch_assoc($result))
+            {
+                $arrayDados = array(
+                    "id"        => $rsDados["idcontato"],
+                    "nome"      => $rsDados["nome"],
+                );
+            }   
+            
+            fecharConexaoMysql($conexao);
+
+            return $arrayDados;
+        }
+    }
 
 ?>

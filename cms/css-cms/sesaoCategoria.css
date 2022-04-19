@@ -195,6 +195,11 @@ input[type=text]:hover{
 
 .registros{
     background-color: #faf9f9;
+    text-transform: lowercase;
+}
+
+.registros::first-letter{
+    text-transform: uppercase;
 }
 
 .destaque{

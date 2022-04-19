@@ -78,6 +78,55 @@
                                 window.history.back(); 
                             </script>");
                 }
+            }elseif($action == "INSERIR")
+            {
+                $resposta = inserirCategoria($_POST);
+
+                if(is_bool($resposta))
+                {
+                    if($resposta)
+                    {
+                        echo("<script>
+                                alert('Registro inserido com sucesso');
+                                window.location.href = 'categorias.php'; 
+                            </script>");
+                    }
+                }elseif(is_array($resposta))
+                {
+                    echo("<script>
+                                alert('".$resposta['message']."');
+                                window.history.back(); 
+                            </script>");
+                }
+            }elseif($action == "BUSCAR")
+            {
+                $idContato = $_GET["id"];
+
+                session_start();
+
+                $_SESSION["dadosCategoria"] = $dados;
+
+                require_once("categorias.php");
+            }elseif($action == "EDITAR")
+            {
+                $idContato = $_GET["id"];
+                
+                $resposta = atualizarContato($_POST, $idContato);
+
+                if(is_bool($resposta))
+                     {
+                         if($resposta){
+                             echo("<script>
+                                     alert('Registro Atualizado com sucesso');
+                                     window.location.href = 'categorias.php'; 
+                                 </script>");
+                         }
+                     }elseif(is_array($resposta)){
+                         echo("<script>
+                                 alert('".$resposta['message']."');
+                                 window.history.back(); 
+                             </script>");
+                     }
             }
         }
     }    

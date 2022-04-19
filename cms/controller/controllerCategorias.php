@@ -48,4 +48,101 @@
                          'message' => "Não é possivel excluir o registro sem informar um id valido.");
         }
      }
+
+     function inserirCategoria($dadosCategoria)
+     {
+        if(!empty($dadosCategoria))
+        {
+            if(!empty($dadosCategoria["txtNome"]))
+            {
+                $arrayDados = array
+                (
+                    "nome" => $dadosCategoria["txtNome"]
+                );
+
+                require_once("model/bd/gerencionamentoCategorias.php");
+
+                if(insertCategoria($arrayDados))
+                {
+                    return true;
+                }else
+                {
+                    return array("idErro" => 1, 
+                    "message" => "não foi possivel inserir os dados no Banco de Dados!!!");
+                }
+            }else
+            {
+                return array("idErro" => 2,
+                            "message" => "existem campos obrigatorios que não foram preenchidos!!!");
+            }
+        }
+     }
+
+     function buscarContato($id)
+     {
+        // Validação para verificar se contem um numero valido 
+        if($id != 0 &&  !empty($id) && is_numeric($id))
+        {
+            // Importe do arquivo de contato
+            require_once("model/bd/gerenciamentoCategorias.php");
+
+            $dados = selectByidContato($id);
+
+            if(!empty($dados))
+            {
+                return $dados;
+            }else
+            {
+                return false;
+            }
+
+        }else
+        {
+            return array('idErro' => 4,
+                         'message' => "Não é possivel buscar um registro sem informar um id valido.");
+        }
+     }
+
+     function atualizarContato($dadosCategoria, $id)
+     {
+         // validação para verificar se o objeto está vazio
+         if(!empty($dadosCategoria))
+         {
+             //validação de caixa vazia dos lementos nome, celular e email pois são obrigatorios no banco de dados
+             if(!empty($dadosCategoria["txtNome"]))
+             {
+                 //validação para garantir que o id seja valido
+                 if(!empty($id) && $id != 0 && is_numeric($id))
+                {
+
+                    $arrayDados = array 
+                    (
+                        "id"        => $id,   
+                        "nome"      => $dadosCategoria["txtNome"],
+                    );
+    
+                    // Import do arquivo da modelagem para manipular o BB
+                    require_once("model/bd/gerenciamentoCategorias.php");
+    
+                    // Chama a função que fará o insert no BD(esta função está na model)
+                    if(updateCategoria($arrayDados))
+                    {
+                        return true;
+                    }else
+                    {
+                        return array("idErro" => 1, 
+                                    "message" => "não foi possivel atualizar os dados no Banco de Dados!!!");
+                    }
+                }else
+                {
+                    return array('idErro' => 4,
+                    'message' => "Não é possivel editar o registro sem informar um id valido.");
+                }
+             }else
+             {
+                 return array("idErro" => 2,
+                             "message" => "existem campos obrigatorios que não foram preenchidos!!!");
+             }
+         }
+     }
 ?>

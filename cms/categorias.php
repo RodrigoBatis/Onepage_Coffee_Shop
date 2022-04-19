@@ -1,3 +1,22 @@
+<?php
+
+    $form =(String) "router.php?component=categorias&action=inserir";
+
+    if(session_status())    
+    {
+        if(!empty($_SESSION["dadosCategoria"]))
+        {
+            $id         = $_SESSION["dadosCategoria"]["id"];
+            $nome       = $_SESSION["dadosCategoria"]["nome"];
+
+            $form = "router.php?component=categorias&action=editar&id=".$id;
+
+            //destroi uma vareavel da memoria do navegador
+            unset($_SESSION["dadosCategoria"]);
+        }
+    }    
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -71,7 +90,7 @@
                     <h1> Cadastro de Categorias </h1>
                 </div>
                 <div class="cadastroInformacoes">
-                   <form action="" name="frmCadastro" method="post">
+                   <form action="<?=$form?>" name="frmCadastro" method="post">
                    <div class="campos">
                         <div class="cadastroInformacoesPessoais">
                             <label> Nome: </label>
@@ -124,7 +143,10 @@
                             <a onclick="return confirm('Tem certeza que quer excluir essa categoria?')" href="router.php?component=categorias&action=deletar&id=<?=$item['id']?>">
                                 <img src="img-cms/trash.png" alt="Excluir" title="Excluir" class="excluir">
                             </a>
-                            <img src="img-cms/edit.png" alt="Editar" title="Editar" class="editar">
+
+                            <a href="router.php?component=categorias&action=buscar&id=<?=$item['id']?>">
+                                <img src="img-cms/edit.png" alt="Editar" title="Editar" class="editar">
+                            </a>
                     </td>
                 </tr>
 
