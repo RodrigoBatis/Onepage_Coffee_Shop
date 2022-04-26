@@ -10,7 +10,7 @@
 
     function listarCategorias()
     {
-      require_once("model/bd/gerencionamentoCategorias.php");
+        require_once("model/bd/gerencionamentoCategorias.php");
 
       // chama a função que vai buscar os dados no BD
       $dados = selectAllCategoria();
@@ -78,13 +78,13 @@
         }
      }
 
-     function buscarContato($id)
+     function buscarCategoria($id)
      {
         // Validação para verificar se contem um numero valido 
         if($id != 0 &&  !empty($id) && is_numeric($id))
         {
             // Importe do arquivo de contato
-            require_once("model/bd/gerenciamentoCategorias.php");
+            require_once("model/bd/gerencionamentoCategorias.php");
 
             $dados = selectByidContato($id);
 
@@ -103,7 +103,7 @@
         }
      }
 
-     function atualizarContato($dadosCategoria, $id)
+     function atualizarCategoria($dadosCategoria, $id)
      {
          // validação para verificar se o objeto está vazio
          if(!empty($dadosCategoria))
@@ -118,11 +118,11 @@
                     $arrayDados = array 
                     (
                         "id"        => $id,   
-                        "nome"      => $dadosCategoria["txtNome"],
+                        "nome"      => $dadosCategoria["txtNome"]
                     );
-    
+
                     // Import do arquivo da modelagem para manipular o BB
-                    require_once("model/bd/gerenciamentoCategorias.php");
+                    require_once("model/bd/gerencionamentoCategorias.php");
     
                     // Chama a função que fará o insert no BD(esta função está na model)
                     if(updateCategoria($arrayDados))

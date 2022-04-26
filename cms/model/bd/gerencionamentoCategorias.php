@@ -86,7 +86,7 @@ function updateCategoria($dadosCategoria)
 
     $sql = "update tbl_categorias set
        nome = '".$dadosCategoria["nome"]."',
-       where idContato =  ".$dadosCategoria["id"].";"
+       where id_categoria =  ".$dadosCategoria["id"].";"
    ;
        
    if (mysqli_query($conexao, $sql))
@@ -121,7 +121,7 @@ function selectByidContato($id)
             if($rsDados = mysqli_fetch_assoc($result))
             {
                 $arrayDados = array(
-                    "id"        => $rsDados["idcontato"],
+                    "id"        => $rsDados["id_categoria"],
                     "nome"      => $rsDados["nome"],
                 );
             }   

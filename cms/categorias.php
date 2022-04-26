@@ -96,7 +96,7 @@
                             <label> Nome: </label>
                         </div>
                         <div class="cadastroEntradaDeDados">
-                            <input type="text" name="txtNome" value="" placeholder="Digite seu nome" maxlength="100">
+                            <input type="text" name="txtNome" value="<?= isset($nome)? $nome:null ?>" placeholder="Digite seu nome" maxlength="100">
                         </div>
                    </div>
                    <div class="enviar">

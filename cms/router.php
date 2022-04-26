@@ -102,6 +102,8 @@
             {
                 $idContato = $_GET["id"];
 
+                $dados = buscarCategoria($idContato);
+
                 session_start();
 
                 $_SESSION["dadosCategoria"] = $dados;
@@ -111,7 +113,7 @@
             {
                 $idContato = $_GET["id"];
                 
-                $resposta = atualizarContato($_POST, $idContato);
+                $resposta = atualizarCategoria($_POST, $idContato);
 
                 if(is_bool($resposta))
                      {

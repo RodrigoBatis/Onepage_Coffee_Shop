@@ -87,6 +87,7 @@
                         <?php
                         require_once("controller/controllerContatos.php");
                         $listContato = listarContato();
+                        
                         foreach ($listContato as $item) {
                         ?>
                             <tr id="tblLinhas">
