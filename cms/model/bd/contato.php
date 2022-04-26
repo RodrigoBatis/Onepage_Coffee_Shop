@@ -32,7 +32,13 @@ function selectAllContato()
                 $cont++;
             }   
             
-            return $arrayDados;
+            fecharConexaoMysql($conexao);
+            
+            if(empty($arrayDados)){
+                return false;
+            }else{
+                return $arrayDados;
+            }
     }
 }
 

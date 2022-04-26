@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="container-escolha">
-                    <a href="">
+                    <a href="usuarios.php">
                     <img src="img-cms/usuarios.png" alt="usuarios">
                     <span>Usuarios</span>
                     </a>

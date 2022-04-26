@@ -29,8 +29,15 @@ function selectAllCategoria()
                 );
                 $cont++;
             }   
-            
+        
+        fecharConexaoMysql($conexao);
+
+        if(empty($arrayDados)){
+            return false;
+          }else
+          {
             return $arrayDados;
+          }
     }
 }
 
@@ -85,9 +92,9 @@ function updateCategoria($dadosCategoria)
     $conexao = conexaoMysql();
 
     $sql = "update tbl_categorias set
-       nome = '".$dadosCategoria["nome"]."',
-       where id_categoria =  ".$dadosCategoria["id"].";"
-   ;
+       nome = '".$dadosCategoria['nome']."'
+       where id_categoria =  ".$dadosCategoria['id'];
+
        
    if (mysqli_query($conexao, $sql))
     {
@@ -107,7 +114,7 @@ function updateCategoria($dadosCategoria)
 }
 
 function selectByidContato($id)
-    {
+{
 
         $conexao = conexaoMysql();
 
@@ -130,6 +137,6 @@ function selectByidContato($id)
 
             return $arrayDados;
         }
-    }
+}
 
 ?>

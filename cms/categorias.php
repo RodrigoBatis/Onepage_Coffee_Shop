@@ -131,7 +131,12 @@
                 <?php
                     require_once("controller/controllerCategorias.php");
                     $listCategorias = listarCategorias();
-                    foreach ($listCategorias as $item) {
+
+                    if(empty($listCategorias)){
+                        return false;
+                    }else{
+
+                        foreach ($listCategorias as $item) {
                 ?>
 
                 <tr id="tblLinhas">   
@@ -152,6 +157,7 @@
 
                 <?php
                     }
+                }
                 ?>
 
             </table>
