@@ -71,14 +71,14 @@
 
             <div class="sesaoDashboard">
                 <h1 class="tituloSesao">Contatos</h1>
-                <div id="consultaDeDados">
-                    <table id="tblConsulta">
+                <div class="consultaDeDados">
+                    <table class="tblConsulta">
                         <tr>
-                            <td id="tblTitulo" colspan="6">
+                            <td class="tblTitulo" colspan="6">
                                 <h1> Consulta de Contatos.</h1>
                             </td>
                         </tr>
-                        <tr id="tblLinhas">
+                        <tr class="tblLinhas">
                             <td class="tblColunas destaque"> Nome </td>
                             <td class="tblColunas destaque"> Email </td>
                             <td class="tblColunas destaque"> Opções </td>
@@ -94,7 +94,7 @@
 
                         foreach ($listContato as $item) {
                         ?>
-                            <tr id="tblLinhas">
+                            <tr class="tblLinhas">
                                 <td class="tblColunas registros"><?= $item["nome"] ?></td>
                                 <td class="tblColunas registros"><?= $item["email"] ?></td>
 

@@ -1,4 +1,4 @@
-#consultaDeDados{
+.consultaDeDados{
     width: 1000px;
     min-height: 600px;
     height: auto;
@@ -9,12 +9,12 @@
     margin-bottom: 10px;
     box-shadow: 10px 10px 10px #505050;
 }
-#tblConsulta{
+.tblConsulta{
     width: 100%;
     min-height: 30px;
     height: auto;
 }
-#tblTitulo{
+.tblTitulo{
     width: 100%;
     height: 30px;
     background-color: brown;
@@ -22,7 +22,7 @@
     text-align: center;
     font-size: 1.6em;
 }
-#tblLinhas{
+.tblLinhas{
     width: 100%;
     height: 50px;
     border: solid 1px black;
@@ -96,43 +96,3 @@
     font-weight: bold;
 }
 
-/*Modal*/
-#containerModal{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    position: fixed;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-#modal{
-    width: 50vw;
-    height: 60vh;
-    background-color: #ffffff;
-/*    margin: auto;*/
-}
-
-.foto{
-    width: 80px;
-    height: 80px;
-}
-
-#visualizarFoto{
-    width: 300px;
-    height: 150px;
-    position: relative;
-    right: -200;
-}
-#visualizarFoto img{
-    width: inherit;
-    height: inherit;
-}
-
-
-#login{
-    height: 200px;
-}
