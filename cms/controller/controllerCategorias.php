@@ -86,7 +86,7 @@
             // Importe do arquivo de contato
             require_once("model/bd/gerencionamentoCategorias.php");
 
-            $dados = selectByidContato($id);
+            $dados = selectByidCategoria($id);
 
             if(!empty($dados))
             {
@@ -146,4 +146,6 @@
              }
          }
      }
+
+     
 ?>

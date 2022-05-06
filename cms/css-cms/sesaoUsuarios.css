@@ -99,6 +99,12 @@ input[type=text]:hover{
     margin-bottom: 20px;
 }
 
+.senha{
+    width: 90%;
+    height: 30px;
+    margin-left: 10px;
+}
+
 /* CSS da tabela de consulta de dados */
 
 .consultaDeDados{

@@ -113,7 +113,7 @@ function updateCategoria($dadosCategoria)
     return $statusResultado;
 }
 
-function selectByidContato($id)
+function selectByidCategoria($id)
 {
 
         $conexao = conexaoMysql();

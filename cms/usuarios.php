@@ -2,6 +2,20 @@
 
 $form =(String) "router.php?component=usuarios&action=inserir";
 
+if(session_status())    
+    {
+        if(!empty($_SESSION["dadosUsuario"]))
+        {
+            $id         = $_SESSION["dadosUsuario"]["id"];
+            $nome       = $_SESSION["dadosUsuario"]["nome"];
+            $login      = $_SESSION["dadosUsuario"]["login"];
+
+            $form = "router.php?component=usuarios&action=editar&id=".$id;
+
+            //destroi uma vareavel da memoria do navegador
+            unset($_SESSION["dadosUsuario"]);
+        }
+    }    
 
 ?>
 
@@ -87,7 +101,7 @@ $form =(String) "router.php?component=usuarios&action=inserir";
                                 </div>
 
                                 <div class="cadastroEntradaDeDados">
-                                    <input type="text" name="txtNome" value="" placeholder="Digite seu nome" maxlength="100">
+                                    <input type="text" name="txtNome" value="<?= isset($nome)? $nome:null ?>" placeholder="Digite seu nome" maxlength="100">
                                 </div>
                         </div>
                         <div class="campos">
@@ -96,7 +110,7 @@ $form =(String) "router.php?component=usuarios&action=inserir";
                                 </div>
 
                                 <div class="cadastroEntradaDeDados">
-                                    <input type="text" name="txtNome" value="" placeholder="Digite seu login" maxlength="100">
+                                    <input type="text" name="txtLogin" value="<?= isset($login)? $login:null ?>" placeholder="Digite seu login" maxlength="100">
                                 </div>
                         </div>
                         <div class="campos">
@@ -105,7 +119,7 @@ $form =(String) "router.php?component=usuarios&action=inserir";
                                 </div>
 
                                 <div class="cadastroEntradaDeDados">
-                                    <input type="text" name="txtSenha" value="" placeholder="Crie sua senha" maxlength="100">
+                                    <input type="password"class="senha" name="txtSenha" value="" placeholder="Crie sua senha" maxlength="100">
                                 </div>
                         </div>
                         <div class="campos">
@@ -114,7 +128,7 @@ $form =(String) "router.php?component=usuarios&action=inserir";
                                 </div>
 
                                 <div class="cadastroEntradaDeDados">
-                                    <input type="text" name="txtVerificarSenha" value="" placeholder="Confirme sua senha" maxlength="100">
+                                    <input type="password"  class="senha" name="txtVerificarSenha" value="" placeholder="Confirme sua senha" maxlength="100">
                                 </div>
                         </div>
                         <div class="enviar">
@@ -160,11 +174,11 @@ $form =(String) "router.php?component=usuarios&action=inserir";
 
                                 <td class="tblColunas registros">
 
-                                    <a onclick="return confirm('Tem certeza que quer excluir esse usuario?')" href="">
+                                    <a onclick="return confirm('Tem certeza que quer excluir esse usuario?')" href="router.php?component=usuarios&action=deletar&id=<?=$item['id']?>">
                                         <img src="img-cms/trash.png" alt="Excluir" title="Excluir" class="excluir">
                                     </a>
 
-                                    <a href="">
+                                    <a href="router.php?component=usuarios&action=buscar&id=<?=$item['id']?>">
                                         <img src="img-cms/edit.png" alt="Editar" title="Editar" class="editar">
                                     </a>
                                 </td>
