@@ -130,6 +130,9 @@
                              </script>");
                      }
             }
+            break;
+
+            case "USUARIOS":
         }
     }    
 

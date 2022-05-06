@@ -1,0 +1,100 @@
+.cadastroUsuarios{
+    width: 800px;
+    min-height: 300px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: solid 2px black;
+    box-shadow: 10px 10px 10px #505050;
+}
+
+.tituloCadastro{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: brown;
+    width: auto;
+    height: 120px;
+    text-align: center;
+    color: white;
+    font-size: 1.6em;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+
+.campos{
+    width: auto;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cadastroInformacoesPessoais  {
+    width: 270px;
+    height: 55px;
+    float: left;
+   
+    background-color: rgb(248, 128, 126);
+    text-align: right;
+    font-size: 1.1em;
+    padding-top: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    
+}
+
+.cadastroEntradaDeDados {
+    width: 600px;
+    height: auto;
+    margin-left: 10px;
+    padding-top: 10px;
+    box-sizing: border-box; 
+}
+
+input[type=text], 
+select {
+    height: 30px;
+    margin-left: 10px;
+    width: 90%;
+
+}
+
+input[type=text]:hover{
+    background-color: rgb(250, 112, 112);
+    transition: 1s;
+}
+
+.cadastroEntradaDeDados textarea{
+    width: 90%;
+    height: 100px;
+    resize: none;
+}
+
+.enviar input{
+    width: 150px;
+    height: 50px;
+    background-color: brown;
+    color: white;
+    font-size: 1.2em;
+}
+
+.enviar input:hover{
+    background-color: rgb(131, 2, 2);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 1s;
+
+}
+
+.enviar{
+    width: 100;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
