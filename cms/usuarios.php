@@ -48,7 +48,7 @@ if(session_status())
     <main>
         <section class="sesaoEscolha">
             <div class="container-escolha">
-                <a href="">
+                <a href="produtos.php">
                     <img src="img-cms/produtos.png" alt="admProdutos">
                     <span>Adm. de Produtos</span>
                 </a>
@@ -93,50 +93,50 @@ if(session_status())
                             <h1> Cadastro de Usuarios </h1>
                         </div>
                         <div class="cadastroInformacoes">
-                        <form action="<?=$form?>" name="frmCadastro" method="post">
+                            <form action="<?=$form?>" name="frmCadastro" method="post">
 
-                        <div class="campos">
-                                <div class="cadastroInformacoesPessoais">
-                                    <label>Nome:</label>
-                                </div>
+                            <div class="campos">
+                                    <div class="cadastroInformacoesPessoais">
+                                        <label>Nome:</label>
+                                    </div>
 
-                                <div class="cadastroEntradaDeDados">
-                                    <input type="text" name="txtNome" value="<?= isset($nome)? $nome:null ?>" placeholder="Digite seu nome" maxlength="100">
-                                </div>
-                        </div>
-                        <div class="campos">
-                                <div class="cadastroInformacoesPessoais">
-                                    <label>Login:</label>
-                                </div>
-
-                                <div class="cadastroEntradaDeDados">
-                                    <input type="text" name="txtLogin" value="<?= isset($login)? $login:null ?>" placeholder="Digite seu login" maxlength="100">
-                                </div>
-                        </div>
-                        <div class="campos">
-                                <div class="cadastroInformacoesPessoais">
-                                    <label>Senha:</label>
-                                </div>
-
-                                <div class="cadastroEntradaDeDados">
-                                    <input type="password"class="senha" name="txtSenha" value="" placeholder="Crie sua senha" maxlength="100">
-                                </div>
-                        </div>
-                        <div class="campos">
-                                <div class="cadastroInformacoesPessoais">
-                                    <label>Confirme sua Senha:</label>
-                                </div>
-
-                                <div class="cadastroEntradaDeDados">
-                                    <input type="password"  class="senha" name="txtVerificarSenha" value="" placeholder="Confirme sua senha" maxlength="100">
-                                </div>
-                        </div>
-                        <div class="enviar">
-                                <div class="enviar">
-                                    <input type="submit" name="btnEnviar" value="Salvar">
-                                </div>
+                                    <div class="cadastroEntradaDeDados">
+                                        <input type="text" name="txtNome" value="<?= isset($nome)? $nome:null ?>" placeholder="Digite seu nome" maxlength="100">
+                                    </div>
                             </div>
-                        </form>
+                            <div class="campos">
+                                    <div class="cadastroInformacoesPessoais">
+                                        <label>Login:</label>
+                                    </div>
+
+                                    <div class="cadastroEntradaDeDados">
+                                        <input type="text" name="txtLogin" value="<?= isset($login)? $login:null ?>" placeholder="Digite seu login" maxlength="100">
+                                    </div>
+                            </div>
+                            <div class="campos">
+                                    <div class="cadastroInformacoesPessoais">
+                                        <label>Senha:</label>
+                                    </div>
+
+                                    <div class="cadastroEntradaDeDados">
+                                        <input type="password"class="senha" name="txtSenha" value="" placeholder="Crie sua senha" maxlength="100">
+                                    </div>
+                            </div>
+                            <div class="campos">
+                                    <div class="cadastroInformacoesPessoais">
+                                        <label>Confirme sua Senha:</label>
+                                    </div>
+
+                                    <div class="cadastroEntradaDeDados">
+                                        <input type="password"  class="senha" name="txtVerificarSenha" value="" placeholder="Confirme sua senha" maxlength="100">
+                                    </div>
+                            </div>
+                            <div class="enviar">
+                                    <div class="enviar">
+                                        <input type="submit" name="btnEnviar" value="Salvar">
+                                    </div>
+                                </div>
+                            </form>
 
                         </div>
 

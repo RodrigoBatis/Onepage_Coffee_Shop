@@ -32,7 +32,7 @@
     <main>
         <section class="sesaoEscolha">
             <div class="container-escolha">
-                <a href="">
+                <a href="produtos.php">
                     <img src="img-cms/produtos.png" alt="admProdutos">
                     <span>Adm. de Produtos</span>
                 </a>

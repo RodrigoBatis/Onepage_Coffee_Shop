@@ -108,6 +108,7 @@ function selectByidUsuario($id)
                 $arrayDados = array(
                     "id"        => $rsDados["id_usuario"],
                     "nome"      => $rsDados["nome"],
+                    "login"      => $rsDados["login"],
                 );
             }   
             

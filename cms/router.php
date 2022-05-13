@@ -158,9 +158,9 @@
                 }
             }elseif($action == 'DELETAR')
             {
-                $idUsuario = $_GET["id"];
+                $idProduto = $_GET["id"];
                    
-                $resposta = excluirUsuario($idUsuario);
+                $resposta = excluirUsuario($idProduto);
                     
                 if(is_bool($resposta))
                 {
@@ -180,9 +180,9 @@
                 }
             }elseif($action == 'BUSCAR')
             {
-                $idUsuario = $_GET["id"];
+                $idProduto = $_GET["id"];
 
-                $dados = buscarUsuario($idUsuario);
+                $dados = buscarUsuario($idProduto);
 
                 session_start();
 
@@ -191,9 +191,9 @@
                 require_once("usuarios.php");
             }elseif($action == 'EDITAR')
             {
-                $idUsuario = $_GET["id"];
+                $idProduto = $_GET["id"];
                 
-                $resposta = atualizarUsuario($_POST, $idUsuario);
+                $resposta = atualizarUsuario($_POST, $idProduto);
 
                 if(is_bool($resposta))
                      {
@@ -210,6 +210,58 @@
                              </script>");
                      }
             }
+            break;
+
+            case "PRODUTOS":
+
+            require_once("Controller/controllerProdutos.php");
+         
+            if($action == 'INSERIR')
+            {
+                $resposta = inserirUsuarios($_POST);
+
+                if(is_bool($resposta))
+                {
+                    if($resposta)
+                    {
+                        echo("<script>
+                                alert('Registro inserido com sucesso');
+                                window.location.href = 'usuarios.php'; 
+                            </script>");
+                    }
+                }elseif(is_array($resposta))
+                {
+                    echo("<script>
+                                alert('".$resposta['message']."');
+                                window.history.back(); 
+                            </script>");
+                }
+            }elseif($action == 'DELETAR')
+            {
+                $idProduto = $_GET["id"];
+                   
+                $resposta = excluirProduto($idProduto);
+                    
+                if(is_bool($resposta))
+                {
+                    if($resposta)
+                    {
+                        echo("<script>
+                                    alert('Usuario excluido com sucesso');
+                                    window.location.href = 'produtos.php'; 
+                                </script>");
+                    }
+                }elseif(is_array($resposta))
+                {
+                    echo("<script>
+                                alert('".$resposta['message']."');
+                                window.history.back(); 
+                            </script>");
+                }
+            }
+            
+
+            
         }
     }    
 
